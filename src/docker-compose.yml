@@ -11,7 +11,7 @@ services:
       - inception
     restart: unless-stopped
     volumes:
-      - /Users/sbouzidi/data/wordpress:/var/www/html
+      - /home/sbouzidi.42.fr/data/wordpress:/var/www/html
   
   wordpress:
     build: requirements/Wordpress/
@@ -23,7 +23,7 @@ services:
     depends_on:
       - mariadb
     volumes:
-      - /Users/sbouzidi/data/wordpress:/var/www/html
+      - /home/sbouzidi.42.fr/data/wordpress:/var/www/html
     environment:
       - DOMAIN_NAME=${DOMAIN_NAME}
       - MARIADB_USER=${MARIADB_USER}
@@ -43,7 +43,7 @@ services:
       - inception
     restart: on-failure
     volumes:
-      - /Users/sbouzidi/data/mariadb:/var/lib/mysql
+      - /home/sbouzidi.42.fr/data/wordpress:/var/www/html
     environment:
       - MARIADB_USER=${MARIADB_USER}
       - MARIADB_PASSWORD=${MARIADB_PASSWORD}

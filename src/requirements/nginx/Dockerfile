@@ -9,7 +9,7 @@ RUN		mkdir -p /etc/ssl/private
 RUN 	mkdir -p /etc/ssl/certs
 RUN		mkdir /var/www/html
 RUN		echo "<h1>salut les amis </h1>" > /var/www/html/index.html;
-RUN 	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=FR/ST=PACA/L=NICE/O=42Nice/CN=gscalisi.42.fr"
+RUN 	openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/C=FR/ST=PACA/L=NICE/O=42Nice/CN=sbouzidi.42.fr"
 COPY	./conf/default.conf	/etc/nginx/http.d/default.conf
 
 
