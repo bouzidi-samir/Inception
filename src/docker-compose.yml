@@ -14,7 +14,7 @@ services:
       - /home/sbouzidi.42.fr/data/wordpress:/var/www/html
   
   wordpress:
-    build: requirements/Wordpress/
+    build: requirements/wordpress/
     image: wordpress
     container_name: wordpress
     networks:
@@ -36,7 +36,7 @@ services:
 
     
   mariadb:
-    build: requirements/Mariadb/
+    build: requirements/mariadb/
     image: mariadb
     container_name: mariadb
     networks:
